@@ -18,7 +18,7 @@ public class Edge {
         logger.setLevel(Level.OFF);
 
 
-        String driverPath = "";
+        /*String driverPath = "";*/
         String url = "http://alex.academy/ua";
 
         if (!System.getProperty("os.name").contains("Windows"))

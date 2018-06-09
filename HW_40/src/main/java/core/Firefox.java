@@ -15,16 +15,16 @@ public class Firefox {
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.OFF);
 
-        String driverPath = "";
+       /* String driverPath = "";*/
         String url = "http://alex.academy/ua";
 
-        if (System.getProperty("os.name").contains("Mac")){
+       /* if (System.getProperty("os.name").contains("Mac")){
             driverPath = "./resources/webdrivers/mac/geckodriver.sh";
         } else if (System.getProperty("os.name").contains("Windows")){
             driverPath = "./resources/webdrivers/pc/geckodriver.exe";
         } else {
             throw new  IllegalArgumentException("Unknown OS");
-        }
+        }*/
 
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

@@ -18,30 +18,31 @@ public class Chrome {
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.OFF);
 
-        String driverPath = "";
+        /*String driverPath = "";*/
         String url = "http://alex.academy/ua";
 
-        if (System.getProperty("os.name").contains("Mac")){
+       /* if (System.getProperty("os.name").contains("Mac")){
             driverPath = "./resources/webdrivers/mac/chromdriver";
         } else if ( System.getProperty("os.name").contains("Windows")){
             driverPath = "./resources/webdrivers/mac/chromdriver.exe";
 
         } else {
             throw new IllegalArgumentException("Unknown OS");
-        }
+        }*/
 
         ChromeOptions option = new ChromeOptions();
-        option.addArguments("disable-infobars");
+       /* option.addArguments("disable-infobars");
         option.addArguments("--disable-notifications");
 
         if (System.getProperty("os.name").contains("Mac")){
             option.addArguments("-start-fullscreen");
         } else if (System.getProperty("os.name").contains("Windows")) {
             option.addArguments("--start-maximized");
-        }
+        }*/
 
         driver = new ChromeDriver(option);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
 
         driver.get(url);
 
