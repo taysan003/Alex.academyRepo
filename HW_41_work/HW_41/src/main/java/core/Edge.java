@@ -52,7 +52,7 @@ public class Edge {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("userNavigationLabel"))).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li[@class='_54ni navSubmenu _6398 _64kz __MenuItem']//a[@class='_54nc']//span//span[@class='_54nh']"))).click();
 
-        
+
         driver.close();
         System.out.println("Browser is: Firefox");
         System.out.println("Title of the page: " + title);

@@ -51,7 +51,8 @@ public class Firefox extends TestBase{
                 .pollingEvery(5, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
 
-        String copyright = fluentWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\'pageFooter\']/div[3]/div/span"))).getText();
+        String copyright = fluentWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\'pageFooter\']" +
+                "/div[3]/div/span"))).getText();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).clear();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email"))).sendKeys(email_address);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("pass"))).clear();

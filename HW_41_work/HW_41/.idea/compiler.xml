@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Automation" />
         <module name="HW_40" />
+        <module name="HW_41" />
       </profile>
     </annotationProcessing>
   </component>
