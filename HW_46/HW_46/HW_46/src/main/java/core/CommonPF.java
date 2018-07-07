@@ -120,7 +120,7 @@ public static void pageValidationPF(String test_case, WebElement element) {
 	@FindBy(xpath="//*[@id='email_error']/img") static WebElement pf_el_40;		// signup
 	@FindBy(xpath="//*[@id='phone_error']/img") static WebElement pf_el_41;		// signup
 
-	@FindBy(xpath="id_gender") static WebElement pf_el_42;						//confirmation
-	@FindBy(xpath="id_back_button") static WebElement pf_el_43;					//confirmation
+	@FindBy(id="id_gender") static WebElement pf_el_42;						//confirmation
+	@FindBy(id="id_back_button") static WebElement pf_el_43;					//confirmation
 	
 }
