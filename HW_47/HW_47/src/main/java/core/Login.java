@@ -61,7 +61,7 @@ public class Login {
 	public static void main(String[] args) throws Exception {
 
 		String username = "alex";
-		// String password = "password";
+		/*String password = "password";*/
 		String mac_address = new Scanner(Runtime.getRuntime().exec("ifconfig en0").getInputStream()).useDelimiter("\\A").next().split(" ")[4];
 
 		System.out.println(login(username, decrypt("UefMcE7rOkNfxEi4myffKw==", new SecretKeySpec(Arrays.copyOf(mac_address.getBytes("UTF-8"), 16), "AES"))));

@@ -13,8 +13,8 @@ public class Edge {
 	public static void main(String[] args) throws InterruptedException {
 		Logger.getLogger("").setLevel(Level.OFF);
 		String url = "http://alex.academy/exe/login/index.html";
-		if (!System.getProperty("os.name").contains("WINDOWS")) throw new IllegalArgumentException("Edge is not available only on Mac");
-		System.setProperty("webdriver.edge.driver", "./resources/webdrivers/pc/MicrosoftWebDriver.exe");
+		/*if (!System.getProperty("os.name").contains("WINDOWS")) throw new IllegalArgumentException("Edge is not available only on Mac");
+		System.setProperty("webdriver.edge.driver", "./resources/webdrivers/pc/MicrosoftWebDriver.exe");*/
 		WebDriver driver = new EdgeDriver();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
