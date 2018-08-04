@@ -128,25 +128,41 @@ Example: 1000=> 1750
 Problem: Write a program which accepts a decimal number and converts it to octal;
 */
 
+/*Problem: Write a programm which accepts a decimal number and converts it to hexadecimal.
+Example: 1000 =>3e8*/
+
 
 import java.util.Scanner;
 
 public class TestClass {
+
     public static void main(String[] args) {
-        System.out.println("Enter a number");
-        Scanner input =new Scanner(System.in);
-        int number = input.nextInt();
+        Scanner input = new Scanner(System.in);
+        String hexadecimal = input.nextLine();
         input.close();
-        int decimal = number;
-        String binary = "";
-        System.out.println("Binary of " + decimal+ " = " + Integer.toBinaryString(decimal));
-        System.out.println("Binary of " + decimal+ " = " + Integer.toString(decimal, 2));
-        while(decimal>0){
-            binary = String.valueOf(decimal%2)+binary;
-            decimal/=2;
+
+        if (!hexadecimal.matches("^[0-9a-fA-F]+$")){
+            System.err.print("Not a hexadecimal");
+            System.exit(0);
         }
-        System.out.println("Binary of decimal " + number+ " = "+ binary);
+        if(hexadecimal.length()>19){
+            System.err.print("Not support > 19");
+            System.exit(0);
+        }
+
+        System.out.println("Decimal : "+ Integer.parseInt(hexadecimal, 16));
+        String digits = "0123456789ABCDEF";
+        int decimal =0;
+
+        for (int i = 0; i <hexadecimal.length() ; i++) {
+            char c = hexadecimal.toUpperCase().charAt(i);
+            int digit = digits.indexOf(c);
+            decimal = decimal*16+digit;
+
+        }
+        System.out.println("Decimal: "+ decimal);
     }
+
 }
 
 
