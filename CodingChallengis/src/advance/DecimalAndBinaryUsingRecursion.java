@@ -9,7 +9,7 @@ public class DecimalAndBinaryUsingRecursion {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the decimal number: ");
-        long number = input.nextLong();
+        long number = Math.abs(input.nextLong());
         input.close();
 
         System.out.println("Binary : " + binary(number) + " of decimal number "+ number);
