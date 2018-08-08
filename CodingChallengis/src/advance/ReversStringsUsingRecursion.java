@@ -20,10 +20,7 @@ public class ReversStringsUsingRecursion {
         if(string.length()<2)
             return string;
         String rever = reverse(string.substring(1))+string.charAt(0);
-        System.out.println(rever);
-
-        System.out.println(string.substring(1));
-        System.out.println(string.charAt(0));
+        
 
         return rever;
     }
